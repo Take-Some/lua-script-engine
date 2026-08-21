@@ -1,0 +1,9 @@
+target/
+.idea/
+.vscode/
+*.dll
+*.pdb
+*.lib
+*.exp
+*.bak-*
+.DS_Store

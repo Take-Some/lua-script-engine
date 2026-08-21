@@ -1,0 +1,28 @@
+[package]
+name = "engine-scripting-lua"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+description = "North Star engine.scripting provider: sandboxed Lua 5.4 runtime"
+license = "MIT OR Apache-2.0"
+
+[package.metadata.northstar.provider]
+route = "engine.scripting.lua"
+install_name = "luaScriptEngine"
+implements = "engine.scripting"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+abi_stable = { workspace = true }
+newengine-plugin-api = { workspace = true }
+newengine-scripting-api = { workspace = true }
+newengine-service-api = { workspace = true }
+parking_lot = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+mlua = { workspace = true }
+
+[build-dependencies]
+embed-resource = "3.0.6"
